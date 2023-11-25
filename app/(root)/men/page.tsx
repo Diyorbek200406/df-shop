@@ -9,7 +9,7 @@ const Men = () => {
       <Header />
       <main className="min-h-[90vh] mt-[10vh] px-12">
         <h1>Bu Men page </h1>
-        <p>hello</p>
+        <p>code</p>
       </main>
       <Footer />
     </>
