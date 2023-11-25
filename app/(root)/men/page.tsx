@@ -8,8 +8,8 @@ const Men = () => {
     <>
       <Header />
       <main className="min-h-[90vh] mt-[10vh] px-12">
-        <h1>Bu Men page figmadagi Men qismi boladi</h1>
-        <p>qonday</p>
+        <h1>Bu Men page </h1>
+        <p>hello</p>
       </main>
       <Footer />
     </>
@@ -17,4 +17,3 @@ const Men = () => {
 };
 
 export default Men;
-
