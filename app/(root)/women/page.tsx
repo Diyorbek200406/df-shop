@@ -9,7 +9,8 @@ const Women = () => {
       <Header />
       <main className="min-h-[90vh] mt-[10vh] px-12">
         <h1>Bu Women page figmadagi Women qismi bo'ladi</h1>
-        <h2>some code</h2>
+        <h2>Coodeeeeee 2</h2>
+        <h2>Coodeeeeee 3</h2>
       </main>
       <Footer />
     </>
