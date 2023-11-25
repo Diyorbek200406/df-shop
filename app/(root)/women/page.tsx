@@ -11,7 +11,12 @@ const Women = () => {
         <h1>Bu Women page figmadagi Women qismi bo'ladi</h1>
 
         <h2>Coodeeeeee</h2>
+
         <p>Heelo</p>
+
+
+        <span>Hello World</span>
+
       </main>
       <Footer />
     </>
