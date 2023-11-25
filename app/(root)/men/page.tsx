@@ -11,6 +11,7 @@ const Men = () => {
         <h1>Bu Men page </h1>
         <p>code</p>
         <p>some code 5</p>
+        <p>coodeeee 999</p>
       </main>
       <Footer />
     </>
