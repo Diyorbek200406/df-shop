@@ -11,6 +11,8 @@ const Men = () => {
         <h1>Bu Men page </h1>
         <p>code</p>
         <p>some code 5</p>
+
+        <span>Bye Bye</span>
       </main>
       <Footer />
     </>
