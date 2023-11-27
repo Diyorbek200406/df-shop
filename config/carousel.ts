@@ -5,7 +5,6 @@ export const BannerCarousel = {
   },
 };
 
-
 export const NewArrivalCarousel = {
   superLargeDesktop: {
     breakpoint: { max: 4000, min: 0 },
