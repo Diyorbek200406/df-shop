@@ -3,7 +3,7 @@ import { FaHeart, FaRegUser, FaShoppingCart } from "react-icons/fa";
 
 const Header = () => {
   return (
-    <div className="fixed z-50 top-0 right-0 left-0 h-[10vh] px-12 flex items-center justify-between bg-slate-600">
+    <div className="fixed z-50  top-0 right-0 left-0 h-[10vh] px-12 flex items-center justify-between bg-slate-600">
       <div>DF-SHOP</div>
 
       <div className="flex items-center gap-8 text-[#eee]">
@@ -11,7 +11,7 @@ const Header = () => {
         <Link href={"/men"}>Men</Link>
         <Link href={"/women"}>Women</Link>
       </div>
-
+      
       <div>
         <input type="text" placeholder="Search..." className="rounded px-8 py-1.5" />
       </div>
