@@ -2,7 +2,6 @@
 
 import Header from "@/components/header";
 import Footer from "@/components/footer";
-import "tw-elements-react/dist/css/tw-elements-react.min.css";
 import Carousel from "react-multi-carousel";
 import { BannerCarousel, NewArrivalCarousel } from "@/config/carousel";
 
@@ -141,23 +140,21 @@ const Home = () => {
         </section>
       </main>
 
-      <section className="CategoryMen ">
-        <div className="block rounded-lg bg-white shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700">
-          <a href="#!">
-            <img className="rounded-t-lg" src="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg" alt="" />
-          </a>
-          <div className="p-6">
-            <h5 className="mb-2 text-xl font-medium leading-tight text-neutral-800 dark:text-neutral-50">Card title</h5>
-            <p className="mb-4 text-base text-neutral-600 dark:text-neutral-200">
-              Some quick example text to build on the card title and make up the bulk of the cards content.
+      <section>
+        <div className="max-w-sm rounded overflow-hidden shadow-lg bg-neutral-400  w-[300px]">
+        <img className="w-full"
+            src="https://avatars.mds.yandex.net/i?id=561b7d965bc1fac8fdf54b38cbfa28dac9a1b9e5-8451085-images-thumbs&ref=rim&n=33&w=250&h=250"
+            alt="Sunset in the mountains"/>
+          <div className="px-6 py-4">
+            <div className="font-bold text-xl mb-2">The Coldest Sunset</div>
+            <p className="text-gray-700 text-base">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia
             </p>
-
-            <button
-              type="button"
-              className="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
-            >
+          </div>
+          <div className="px-6 pt-4 pb-2">
+          <button className="bg-sky-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
               Button
-            </button>
+          </button>
           </div>
         </div>
       </section>
