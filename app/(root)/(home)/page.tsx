@@ -4,60 +4,8 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import Carousel from "react-multi-carousel";
 import { BannerCarousel, NewArrivalCarousel } from "@/config/carousel";
-
-const data = [
-  {
-    title: "T-shirt",
-    link: "https://i.pinimg.com/originals/37/9b/2b/379b2b40d368fda6ae248db12231dd0e.jpg",
-    description: "Autumn Value Pack",
-    name: "cool",
-  },
-  {
-    title: "Palto",
-    link: "https://ae01.alicdn.com/kf/HTB19AxPXOqAXuNjy1Xdq6yYcVXaE/Laser-camouflage-Lederen-mannen-jas-Rex-konijnenbont-liner-schapenhuid-winterjas-Fox-bontkraag-piloot-leer-jas.jpg",
-    description: "Winter Value Pack",
-    name: "cool",
-  },
-  {
-    title: "Puppy",
-    link: "https://masterbundles.com/wp-content/uploads/2023/03/1-697.jpg",
-    description: "Summer Value Pack",
-    name: "cool",
-  },
-  {
-    title: "Puppy",
-    link: "https://ligafutbola.ru/image/cache/catalog/02.02.19/Adidas-sportivnyy-kostum-russia-1-1000x750.jpg",
-    description: "Spring Value Pack",
-    name: "cool",
-  },
-];
-
-const dataCarusel = [
-  {
-    title: "T-shirt",
-    link: "https://i.pinimg.com/originals/37/9b/2b/379b2b40d368fda6ae248db12231dd0e.jpg",
-    description: "Autumn Value Pack",
-    name: "cool",
-  },
-  {
-    title: "Palto",
-    link: "https://ae01.alicdn.com/kf/HTB19AxPXOqAXuNjy1Xdq6yYcVXaE/Laser-camouflage-Lederen-mannen-jas-Rex-konijnenbont-liner-schapenhuid-winterjas-Fox-bontkraag-piloot-leer-jas.jpg",
-    description: "Winter Value Pack",
-    name: "cool",
-  },
-  {
-    title: "Puppy",
-    link: "https://masterbundles.com/wp-content/uploads/2023/03/1-697.jpg",
-    description: "Summer Value Pack",
-    name: "cool",
-  },
-  {
-    title: "Puppy",
-    link: "https://ligafutbola.ru/image/cache/catalog/02.02.19/Adidas-sportivnyy-kostum-russia-1-1000x750.jpg",
-    description: "Spring Value Pack",
-    name: "cool",
-  },
-];
+import { CarouselData, Data } from "@/config/constants";
+import CarouselBannerCard from "@/components/carousel/carousel-banner-card";
 
 const Home = () => {
   return (
@@ -65,41 +13,31 @@ const Home = () => {
       <Header />
 
       <main className="relative min-h-[90vh] mt-[10vh] px-12">
-        <section>
-
-          <Carousel responsive={BannerCarousel} arrows={true} autoPlay={true} autoPlaySpeed={3000} infinite>
-            {data.map((item) => (
-              <>
-                <img className="absolute -z-10 top-0 left-0 right-0 object-cover w-full h-[900px]" src={item.link} alt="banner" />
-                <div className="pl-24 pt-48 w-full h-[90vh]">
-                  <h3 className="text-3xl my-6 text-black">{item.title}</h3>
-                  <h1 className="text-5xl my-6 text-black">{item.description}</h1>
-                  <h4 className="text-3xl my-6 text-black">{item.name}</h4>
-                  <button className="px-12 py-4 bg-slate-100 text-black rounded">Shop now</button>
-                </div>
-              </>
-            ))}
-          </Carousel>
-        </section>
+        <Carousel responsive={BannerCarousel} arrows={true} autoPlay={true} autoPlaySpeed={3000} infinite>
+          {Data.map((item, index) => (
+            <CarouselBannerCard key={index} item={item} />
+          ))}
+        </Carousel>
 
         <h2 className="text-3xl pb-7 pt-10">New Arrival</h2>
-        <section className="carusel-mini ">
-          <Carousel responsive={NewArrivalCarousel} arrows={true} autoPlay={true} autoPlaySpeed={2200} infinite>
-            {dataCarusel.map((item) => (
-              <>
-                <img className="absolute -z-10 top-0 left-0 right-0 object-cover w-full h-[600px] p-2 " src={item.link} alt="banner" />
-                <div className="pl-24 pt-48 w-full h-[90vh] gap-2">
-                  <h3 className="text-3xl my-6 text-">{item.title}</h3>
-                  <h1 className="text-5xl my-6 ">{item.description}</h1>
-                  <h4 className="text-3xl my-6 ">{item.name}</h4>
-                  <button className="px-12 py-4 bg-slate-100 text-black rounded">Shop now</button>
-                </div>
-              </>
-            ))}
-          </Carousel>
-        </section>
+
+        <Carousel responsive={NewArrivalCarousel} arrows={true} autoPlay={true} autoPlaySpeed={2200} infinite>
+          {CarouselData.map((item, index) => (
+            <div key={index}>
+              <img className="absolute -z-10 top-0 left-0 right-0 object-cover w-full h-[600px] p-2" src={item.link} alt="banner" />
+              <div className="pl-24 pt-48 w-full h-[90vh] gap-2">
+                <h3 className="text-3xl my-6 text-">{item.title}</h3>
+                <h1 className="text-5xl my-6">{item.description}</h1>
+                <h4 className="text-3xl my-6">{item.name}</h4>
+                <button className="px-12 py-4 bg-slate-100 text-black rounded">Shop now</button>
+              </div>
+            </div>
+          ))}
+        </Carousel>
+
         <h2 className="text-3xl pb-7 pt-10">Big Saving Zone</h2>
-        <section className="flex gap-y-2 justify-around flex flex-wrap">
+
+        <div className="flex gap-y-2 justify-around flex-wrap">
           <div className=" relative max-w-xs overflow-hidden bg-cover bg-no-repeat  w-[700px] cursor-pointer">
             <img
               src="https://avatars.mds.yandex.net/get-mpic/1705137/img_id8829053300075366949.jpeg/orig"
@@ -122,23 +60,22 @@ const Home = () => {
             />
           </div>
 
-        <Carousel responsive={BannerCarousel} arrows={true} autoPlay={true} autoPlaySpeed={3000} infinite>
-          {data.map((item, index) => (
-            <div key={index}>
-              <img className="absolute -z-10 top-0 left-0 right-0 object-cover w-full h-[900px]" src={item.link} alt="banner" />
-              <div className="pl-24 pt-48 w-full h-[90vh]">
-                <h3 className="text-3xl my-6">{item.title}</h3>
-                <h1 className="text-5xl my-6">{item.description}</h1>
-                <h4 className="text-3xl my-6">{item.name}</h4>
-                <button className="px-12 py-4 bg-slate-100 text-black rounded">Shop now</button>
+          <Carousel responsive={BannerCarousel} arrows={true} autoPlay={true} autoPlaySpeed={3000} infinite>
+            {Data.map((item, index) => (
+              <div key={index}>
+                <img className="absolute -z-10 top-0 left-0 right-0 object-cover w-full h-[900px]" src={item.link} alt="banner" />
+                <div className="pl-24 pt-48 w-full h-[90vh]">
+                  <h3 className="text-3xl my-6">{item.title}</h3>
+                  <h1 className="text-5xl my-6">{item.description}</h1>
+                  <h4 className="text-3xl my-6">{item.name}</h4>
+                  <button className="px-12 py-4 bg-slate-100 text-black rounded">Shop now</button>
+                </div>
               </div>
-            </div>
-          ))}
-        </Carousel>
+            ))}
+          </Carousel>
+        </div>
 
-        </section>
-
-        <section className="flex gap-0 justify-around mt-3">
+        <div className="flex gap-0 justify-around mt-3">
           <div className=" relative max-w-xs overflow-hidden bg-cover bg-no-repeat  w-[700px] cursor-pointer">
             <img
               src="https://android-obzor.com/wp-content/uploads/2022/02/32-5.jpg"
@@ -153,9 +90,8 @@ const Home = () => {
               alt="Louvre"
             />
           </div>
-        </section>
 
-      <section className="">
+
       <h2 className="text-3xl pb-7 pt-10">Categories For Men</h2>
       <div>
         <div className="max-w-sm rounded overflow-hidden shadow-lg bg-neutral-400  w-[300px]">
@@ -166,6 +102,7 @@ const Home = () => {
             <div className="font-bold text-xl mb-2">The Coldest Sunset</div>
             <p className="text-gray-700 text-base">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia
+
             </p>
           </div>
           <div className="px-6 pt-4 pb-2">
@@ -175,9 +112,9 @@ const Home = () => {
           </div>
         </div>
       </div>
-      </section> 
 
-      <section>
+
+
       <h2 className="text-3xl pb-7 pt-10">Categories For Women</h2>
       <div className="flex">
         <div className="max-w-sm rounded overflow-hidden shadow-lg bg-neutral-400  w-[300px]">
@@ -196,9 +133,8 @@ const Home = () => {
           </button>
           </div>
         </div>
-      </div>
-      </section>
-            </main>
+
+      </main>
 
       <Footer />
     </>
