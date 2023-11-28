@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { FaHeart, FaRegUser, FaShoppingCart } from "react-icons/fa";
+import { BiLogInCircle } from "react-icons/bi";
 
 const Header = () => {
   return (
@@ -20,6 +21,9 @@ const Header = () => {
         <FaHeart className="w-5 h-5" />
         <FaRegUser className="w-5 h-5" />
         <FaShoppingCart className="w-5 h-5" />
+        <Link href={"/login"} className="cursor-pointer">
+          <BiLogInCircle className="w-5 h-5" />
+        </Link>
       </div>
     </div>
   );

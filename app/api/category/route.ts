@@ -1,7 +1,7 @@
-import Category from "@/database/category";
 import { ConnectToDatabase } from "@/lib/mongoose";
-import { CategoryProps } from "@/types";
 import { NextResponse } from "next/server";
+import Category from "@/database/category";
+import { CategoryProps } from "@/types";
 
 export const dynamic = "force-dynamic";
 
