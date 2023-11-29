@@ -1,8 +1,10 @@
 import Link from "next/link";
 import { FaHeart, FaRegUser, FaShoppingCart } from "react-icons/fa";
-import { BiLogInCircle } from "react-icons/bi";
+import { BiLogInCircle} from "react-icons/bi";
+import { useParams } from "next/navigation";
 
 const Header = () => {
+  const {} = useParams()
   return (
 
     <div className="fixed z-[1001] top-0 right-0 left-0 h-[10vh] px-12 flex items-center justify-between bg-slate-600">
@@ -22,7 +24,7 @@ const Header = () => {
       <div className="flex items-center gap-6">
         <FaHeart className="w-5 h-5" />
         <FaRegUser className="w-5 h-5" />
-        <FaShoppingCart className="w-5 h-5" />
+        <Link href={"/shop"} className="cursor-pointer">  <FaShoppingCart className="w-5 h-5" /></Link>
         <Link href={"/login"} className="cursor-pointer">
           <BiLogInCircle className="w-5 h-5" />
         </Link>
