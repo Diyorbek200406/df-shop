@@ -5,9 +5,31 @@ import Footer from "@/components/footer";
 import Carousel from "react-multi-carousel";
 import { BannerCarousel, NewArrivalCarousel } from "@/config/carousel";
 import { CarouselData, Data } from "@/config/constants";
+import React, { useEffect, useState } from 'react';
+import axios from "axios";
 import CarouselBannerCard from "@/components/carousel/carousel-banner-card";
 
 const Home = () => {
+
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('http://localhost:7070/api/categories');
+        setData(response.data);
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+
+  console.log(data);
+  
+
   return (
     <>
       <Header />
@@ -108,6 +130,9 @@ const Home = () => {
               <button className="bg-sky-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">Button</button>
             </div>
           </div>
+
+         </div> 
+
         </div>
 
         <h2 className="text-3xl pb-7 pt-10">Categories For Men</h2>
@@ -127,6 +152,7 @@ const Home = () => {
             </div>
           </div>
         </div>
+
 
         <h2 className="text-3xl pb-7 pt-10">Categories For Women</h2>
         <div className="flex">
