@@ -21,13 +21,11 @@ const Header = () => {
         <input type="text" placeholder="Search..." className="rounded px-8 py-1.5" />
       </div>
 
-      <div className="flex items-center gap-6">
-        <FaHeart className="w-5 h-5" />
+      <div className="flex items-center gap-6"> 
+        <Link href={"/like"} className="cursor-pointer"><FaHeart className="w-5 h-5" /></Link>
         <FaRegUser className="w-5 h-5" />
         <Link href={"/shop"} className="cursor-pointer">  <FaShoppingCart className="w-5 h-5" /></Link>
-        <Link href={"/login"} className="cursor-pointer">
-          <BiLogInCircle className="w-5 h-5" />
-        </Link>
+        <Link href={"/login"} className="cursor-pointer"><BiLogInCircle className="w-5 h-5" /></Link>
       </div>
     </div>
   );

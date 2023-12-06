@@ -15,7 +15,7 @@ const Men = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:7070/api/clothes');
+        const response = await axios.get('http://localhost:7070/api/categories');
         setData(response.data);
       } catch (error) {
         console.error('Error:', error);
