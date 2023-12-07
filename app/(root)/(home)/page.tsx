@@ -131,6 +131,7 @@ const Home = () => {
             </div>
           </div>
          </div> 
+        
 
         <h2 className="text-3xl pb-7 pt-10">Categories For Women</h2>
         <div className="flex">
