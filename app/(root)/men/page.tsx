@@ -9,7 +9,7 @@ import axios from "axios";
 
 const Men = () => {
   const [showFirstImage, setShowFirstImage] = useState(true);
-
+  
   const [data, setData] = useState(null);
 
   useEffect(() => {
