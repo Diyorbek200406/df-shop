@@ -5,30 +5,27 @@ import Footer from "@/components/footer";
 import Carousel from "react-multi-carousel";
 import { BannerCarousel, NewArrivalCarousel } from "@/config/carousel";
 import { CarouselData, Data } from "@/config/constants";
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import CarouselBannerCard from "@/components/carousel/carousel-banner-card";
 
 const Home = () => {
-
   const [data, setData] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:7070/api/categories');
+        const response = await axios.get("http://localhost:7070/api/categories");
         setData(response.data);
       } catch (error) {
-        console.error('Error:', error);
+        console.error("Error:", error);
       }
     };
 
     fetchData();
   }, []);
 
-
   console.log(data);
-  
 
   return (
     <>
@@ -130,8 +127,30 @@ const Home = () => {
               <button className="bg-sky-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">Button</button>
             </div>
           </div>
+
          </div> 
         
+
+
+
+        <h2 className="text-3xl pb-7 pt-10">Categories For Men</h2>
+        <div>
+          <div className="max-w-sm rounded overflow-hidden shadow-lg bg-neutral-400  w-[300px]">
+            <img
+              className="w-full"
+              src="https://avatars.mds.yandex.net/i?id=561b7d965bc1fac8fdf54b38cbfa28dac9a1b9e5-8451085-images-thumbs&ref=rim&n=33&w=250&h=250"
+              alt="Sunset in the mountains"
+            />
+            <div className="px-6 py-4">
+              <div className="font-bold text-xl mb-2">The Coldest Sunset</div>
+              <p className="text-gray-700 text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia</p>
+            </div>
+            <div className="px-6 pt-4 pb-2">
+              <button className="bg-sky-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">Button</button>
+            </div>
+          </div>
+        </div>
+
 
         <h2 className="text-3xl pb-7 pt-10">Categories For Women</h2>
         <div className="flex">
