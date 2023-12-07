@@ -127,7 +127,11 @@ const Home = () => {
               <button className="bg-sky-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">Button</button>
             </div>
           </div>
-        </div>
+
+         </div> 
+        
+
+
 
         <h2 className="text-3xl pb-7 pt-10">Categories For Men</h2>
         <div>
@@ -146,6 +150,7 @@ const Home = () => {
             </div>
           </div>
         </div>
+
 
         <h2 className="text-3xl pb-7 pt-10">Categories For Women</h2>
         <div className="flex">
@@ -171,4 +176,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Home;  

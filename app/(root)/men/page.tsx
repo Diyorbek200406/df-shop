@@ -10,20 +10,13 @@ import Link from "next/link";
 import { useGlobalContext } from "@/context";
 import Loader from "@/components/loader";
 
-export interface Clothes {
-  id: string;
-  name: string;
-  image: string;
-  category_id: string;
-  title: string;
-  __v: number;
-  _id: string;
-}
+
 
 const Men = () => {
   const [data, setData] = useState([]);
   const [categories, setCategories] = useState([]);
   const [categoryId, setCategoryId] = useState("");
+
 
   useEffect(() => {
     const fetchData = async () => {
