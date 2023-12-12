@@ -7,8 +7,6 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { redirect } from "next/navigation";
 import Link from "next/link";
-import { useGlobalContext } from "@/context";
-import Loader from "@/components/loader";
 
 export interface Clothes {
   id: string;
@@ -48,10 +46,11 @@ const Men = () => {
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     try {
+      const { name, image, title }: any = e.target;
       await axios.post("http://localhost:7070/api/clothes", {
-        name: e.target.name.value,
-        image: e.target.image.value,
-        title: e.target.title.value,
+        name: name.value,
+        image: image.value,
+        title: title.value,
         category_id: categoryId,
       });
 
