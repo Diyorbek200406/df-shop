@@ -8,13 +8,18 @@ import { toast } from "react-toastify";
 import { redirect } from "next/navigation";
 import Link from "next/link";
 
-
+export interface Clothes {
+  _id: string;
+  name: string;
+  image: string;
+  title: string;
+  category_id: string;
+}
 
 const Men = () => {
   const [data, setData] = useState([]);
   const [categories, setCategories] = useState([]);
   const [categoryId, setCategoryId] = useState("");
-
 
   useEffect(() => {
     const fetchData = async () => {
